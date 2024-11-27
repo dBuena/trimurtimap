@@ -1,0 +1,77 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+/* Layout */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left Panel for Monster Selection */
+.left-panel {
+    width: 25%;
+    background-color: #343434;
+    border-right: 2px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.left-panel h3 {
+    margin: 0 0 10px 0;
+}
+
+.left-panel ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-panel ul li {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #eaeaea;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.left-panel ul li:hover {
+    background-color: #d5d5d5;
+}
+
+/* Right Panel for Map */
+.right-panel {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343434;
+}
+
+.map-container {
+    margin: 50px auto 0;
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Limit maximum map width */
+    aspect-ratio: 1 / 1; /* Ensures the map maintains aspect ratio */
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Highlight styles */
+.highlight {
+    position: absolute;
+    transform: translate(-50%, -50%); /* Center the highlight */
+    width: 10%; /* Adjust this to control the default size */
+    pointer-events: none; /* Prevent interaction */
+}
